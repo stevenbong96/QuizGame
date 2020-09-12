@@ -1,0 +1,5 @@
+const quizQuestion = [
+    {
+        question1 = ""
+    }
+]
