@@ -1,0 +1,15 @@
+/* Give appropriate style to the quiz app */
+body{
+
+}
+h1{
+    text-align: center;
+}
+.container{
+    justify-content: center;
+}
+button{
+    
+}
+
+/* Create media querries to make the quiz app responsive */
