@@ -1,15 +1,64 @@
 /* Give appropriate style to the quiz app */
 body{
-
+    background-color: #bdd4e7;
+    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+    min-height: 100vh;    
 }
+
+header {
+    text-align: center;
+    padding: 20px;
+    padding-top: 10vh;
+    color: hsl(59, 89%, 50%);
+  }
+
+.timer{
+    text-align: right;
+    font-size: 20px;
+    margin-right: 5%;
+}
+
 h1{
     text-align: center;
 }
+
 .container{
-    justify-content: center;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 10px 0px;
+    color: hsl(206, 17%, 28%);
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 30px 40px;
+    }
+
+hr{
+    height: 5%;
+    margin-top: 1%;
+    margin-bottom: 5%;
 }
+
+ul{
+    list-style-type: none;
+    padding: 0%;
+}
+
+li{
+    padding: 1%;
+}
+
 button{
-    
+    background-color: rgb(255, 0, 255);
+    color: white;
+    display: block;
+    margin: 0 auto;
+    font-size: 25px;
+    width: 100%;
+    padding: 1%;
+    border-radius: 10px;
+    margin-top: 5%;
 }
 
 /* Create media querries to make the quiz app responsive */
