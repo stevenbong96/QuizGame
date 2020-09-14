@@ -114,6 +114,8 @@ function setTimerCountdown(){
 }
 
 // Set the result page to show after last question has been answered
+
+// On the result page, add list of person including the scores they achieved from Activity 19
 // function getResult(){
 //     timer.textContent = currentState + " seconds";
 
