@@ -1,7 +1,7 @@
 /* Give appropriate style to the quiz app */
 body{
-    background-color: #bdd4e7;
-    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+    background-color: #7ee8fa;
+    background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
     min-height: 100vh;    
 }
 
@@ -9,7 +9,7 @@ header {
     text-align: center;
     padding: 20px;
     padding-top: 10vh;
-    color: hsl(59, 89%, 50%);
+    color: hsl(20, 98%, 50%);
   }
 
 .timer{
