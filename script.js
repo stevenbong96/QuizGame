@@ -46,6 +46,7 @@ const quizQuestion = [
 ];
 
 // Declare the variables from HTML using the getElementById
+var quizApp = document.getElementById("quizApp");
 var questionOptions = document.getElementById("quiz-question");
 var option1 = document.getElementById("choice1");
 var option2 = document.getElementById("choice2");
@@ -55,11 +56,13 @@ var submitButton = document.getElementById("submit");
 var container = document.getElementById(".container");
 var timer = document.getElementById("timer");
 var result = document.getElementById("result");
+var entireAnswer = document.getElementById(".answerOption");
 
 // State the start position
 let currentState = 0;
 let quizScore = 0;
 var setTime = 60;
+// let currentAnswer = none;
 
 // Call the quiz function
 storeQuiz();
@@ -77,14 +80,22 @@ function storeQuiz(){
     option4.textContent = loadCurrentQuestion.answer4;
 }
 
+// Create a function to check if the result selected by user right or wrong
+// function selectedAnswer(){
+    
+// }
+
 // Add event listener to the submit button
 submitButton.addEventListener("click", function(){
 
     if(currentState < quizQuestion.length){
         currentState++;
         storeQuiz();
+    } else if (currentState === quizQuestion.length - 1){
+        quizApp.innerHTML = `<button>Next</button>`;
     } else {
-        alert("You finish!");
+        quizApp.innerHTML = `<h2>You're done with the Quiz!!! Here's the result:</h2>
+        <button onclick="location.reload()">Reload</button>`;
     }
 })
 
@@ -106,7 +117,7 @@ function setTimerCountdown(){
 // function getResult(){
 //     timer.textContent = currentState + " seconds";
 
-//     result.textContent = ""
+//     result.textContent = "Here's the result"
 // }
 
 // Call the setTimerCountdown function to display the timer
