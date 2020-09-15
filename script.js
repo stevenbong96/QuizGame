@@ -56,13 +56,14 @@ var submitButton = document.getElementById("submit");
 var container = document.getElementById(".container");
 var timer = document.getElementById("timer");
 var result = document.getElementById("result");
-var entireAnswer = document.getElementById(".answerOption");
+var entireAnswer = document.querySelectorAll(".answerOption");
 var listPeople = document.querySelector("#listpeople");
 var addButton = document.querySelector("#addbutton");
+var quizScore = document.getElementById("score");
 
 // State the start position
 let currentState = 0;
-let quizScore = 0;
+// let quizScore = 0;
 var setTime = 60;
 var people = [{name: "Steven"}];
 // let currentAnswer = none;
@@ -85,27 +86,37 @@ function storeQuiz(){
 
 // Create a function to check if the result selected by user right or wrong
 function selectedAnswer(){
-    let answer = undefined;
-
+    let checkAnswer = undefined;
+    // Check this loop
     entireAnswer.forEach(function(entireAnswer){
         if(entireAnswer.checked){
-            answer = entireAnswer.id;
+            checkAnswer = entireAnswer.id;
         }
     });
-    return answer;
+    return checkAnswer;
+}
+
+// Clear the selected answer function
+function clearAnswer(){
+    // Also check this loop
+    entireAnswer.forEach(function(entireAnswer){
+        entireAnswer.checked = false;
+    })
 }
 
 // Add event listener to the submit button
 submitButton.addEventListener("click", function(){
     // Check the answer
     var answerChoices = selectedAnswer();
+
     if(answerChoices){
-        if(answer === quizQuestion[currentState].correct){
-            score = score + 20;
+        // Check variables
+        if(answerChoices === quizQuestion[currentState].correctAns){
+            quizScore.textContent = quizScore;
+            // score = score + 20;
         }
         currentState++;
         if(currentState < quizQuestion.length){
-            currentState++;
             storeQuiz();
         } else if (currentState === quizQuestion.length - 1){
             quizApp.innerHTML = `<button>Submit</button>`;
@@ -155,7 +166,7 @@ function listOfPerson(event){
 }
 
 // Add the event listener to the buttons
-addButton.addEventListener("click", listOfPerson());
+// addButton.addEventListener("click", listOfPerson());
 
 // Call the setTimerCountdown function to display the timer
 setTimerCountdown();
