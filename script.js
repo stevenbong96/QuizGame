@@ -57,11 +57,14 @@ var container = document.getElementById(".container");
 var timer = document.getElementById("timer");
 var result = document.getElementById("result");
 var entireAnswer = document.getElementById(".answerOption");
+var listPeople = document.querySelector("#listpeople");
+var addButton = document.querySelector("#addbutton");
 
 // State the start position
 let currentState = 0;
 let quizScore = 0;
 var setTime = 60;
+var people = [{name: "Steven"}];
 // let currentAnswer = none;
 
 // Call the quiz function
@@ -81,21 +84,40 @@ function storeQuiz(){
 }
 
 // Create a function to check if the result selected by user right or wrong
-// function selectedAnswer(){
-    
-// }
+function selectedAnswer(){
+    let answer = undefined;
+
+    entireAnswer.forEach(function(entireAnswer){
+        if(entireAnswer.checked){
+            answer = entireAnswer.id;
+        }
+    });
+    return answer;
+}
 
 // Add event listener to the submit button
 submitButton.addEventListener("click", function(){
-
-    if(currentState < quizQuestion.length){
+    // Check the answer
+    var answerChoices = selectedAnswer();
+    if(answerChoices){
+        if(answer === quizQuestion[currentState].correct){
+            score = score + 20;
+        }
         currentState++;
-        storeQuiz();
-    } else if (currentState === quizQuestion.length - 1){
-        quizApp.innerHTML = `<button>Next</button>`;
-    } else {
-        quizApp.innerHTML = `<h2>You're done with the Quiz!!! Here's the result:</h2>
-        <button onclick="location.reload()">Reload</button>`;
+        if(currentState < quizQuestion.length){
+            currentState++;
+            storeQuiz();
+        } else if (currentState === quizQuestion.length - 1){
+            quizApp.innerHTML = `<button>Submit</button>`;
+        } else {
+            quizApp.innerHTML = `<h2>You're done with the Quiz!!! Here's the result:</h2>
+            <form>
+            <ul id="listpeople"></ul>
+                <input type="text" id="nameinput" placeholder="Put your name here">
+                <button id="addbutton">Add to the Honorable Mentions</button>
+            </form>
+            <button onclick="location.reload()">Reload</button>`;
+        }
     }
 })
 
@@ -116,11 +138,24 @@ function setTimerCountdown(){
 // Set the result page to show after last question has been answered
 
 // On the result page, add list of person including the scores they achieved from Activity 19
-// function getResult(){
-//     timer.textContent = currentState + " seconds";
+function listOfPerson(event){
+    event.preventDefault();
+    // Create variable to add name to 
+    var addName = nameList.value;
+    var li = document.createElement("li");
+    li.id = people.length;
+    li.innerHTML = name;
+    people.push({name: name});
+    listPeople.appendChild(li);
 
-//     result.textContent = "Here's the result"
-// }
+    // Create if statement to check if the user put a name or not
+    if(!name){
+        return
+    }
+}
+
+// Add the event listener to the buttons
+addButton.addEventListener("click", listOfPerson());
 
 // Call the setTimerCountdown function to display the timer
 setTimerCountdown();
