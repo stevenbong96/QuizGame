@@ -1,47 +1,40 @@
 // Generate the quiz questions
 const quizQuestion = [
     {
-        questions: "Who is the current president of USA?",
-        answer1: "John F. Kennedy",
-        answer2: "Donald Trump",
-        answer3: "James Bond",
-        answer4: "Travis Scott",
+        questions: "How to declare variable in Javascript?",
+        answer1: "var name = Joe",
+        answer2: "answer 1 and 3 are corret",
+        answer3: "const yourAge = 30",
+        answer4: "country = USA",
         correctAns: "answer2",
     }, {
-        questions: "Who won Super Bowl 2019?",
-        answer1: "Seattle Seahawks",
-        answer2: "Houston Texans",
-        answer3: "Los Angeles Rams",
-        answer4: "New England Patriots",
+        questions: "What's the command for inserting a string into an array?",
+        answer1: ".forEeach()",
+        answer2: ".shift()",
+        answer3: "myFunction()",
+        answer4: ".push()",
         correctAns: "answer4",
     }, {
-        questions: "Who is the instructor of our current Coding BootCamp?",
-        answer1: "Ariana Grande",
-        answer2: "Kaney West",
-        answer3: "Joe Rehfuss",
-        answer4: "Bill Gates",
+        questions: "How to log your value to browser console?",
+        answer1: "cnsl.lg()",
+        answer2: "console.println()",
+        answer3: "console.log()",
+        answer4: "const console = log()",
         correctAns: "answer3",
     }, {
-        questions: "What's the result of 1 + 1 * 0 ? ",
+        questions: "What's the result of var x = (1 + 1 * 0) ? ",
         answer1: "1",
         answer2: "0",
         answer3: "2",
         answer4: "Undefined",
         correctAns: "answer1",
     }, {
-        questions: "Who was the first person to walk on the moon?",
-        answer1: "Neil Amstrong",
-        answer2: "Jimmy Neutron",
-        answer3: "Jimmy Falon",
-        answer4: "Ellen",
+        questions: "How to conver letters to upper case?",
+        answer1: ".toUpperCase()",
+        answer2: "var x = toUpperCase()",
+        answer3: "changeToUpperCase()",
+        answer4: ".shiftToUpperCase()",
         correctAns: "answer1",
-    }, {
-        questions: "How many states are there in the US?",
-        answer1: "49",
-        answer2: "52",
-        answer3: "51",
-        answer4: "50",
-        correctAns: "answer4",
     },
 ];
 
@@ -170,6 +163,3 @@ function listOfPerson(event){
 
 // Call the setTimerCountdown function to display the timer
 setTimerCountdown();
-
-// Testing
-console.log("+++++++++++++++++")
