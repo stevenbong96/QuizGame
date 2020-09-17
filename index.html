@@ -28,37 +28,59 @@
 
     <!-- Main container for quiz -->
     <div class="container" id="quizApp">
-        <h2 id="quiz-question">Quiz Questions!</h2>
+        <div class="hiding">
+            <h2 id="quiz-question">Quiz Questions!</h2>
 
-    <!-- Line separator -->
-    <hr>
+        <!-- Line separator -->
+        <hr>
+            <div class="question-list">
+                <!-- Start of the answers -->
+                <ul>
+                    <!-- First answer option -->
+                    <li>
+                        <!-- <input type="radio" class="answerOption" id="answer1" name="quiz-answer">
+                        <label id="choice1" for="answer1">Question</label> -->
+                        <button id="choice1">Question</button>
+                    </li>
+                    <!-- Second answer option -->
+                    <li>
+                        <!-- <input type="radio" class="answerOption" id="answer2" name="quiz-answer">
+                        <label id="choice2" for="answer2">Question</label> -->
+                        <button id="choice2">Question</button>
+                    </li>
+                    <!-- Third answer option -->
+                    <li>
+                        <!-- <input type="radio" class="answerOption" id="answer3" name="quiz-answer">
+                        <label id="choice3" for="answer3">Question</label> -->
+                        <button id="choice3">Question</button>
+                    </li>
+                    <!-- Fourth answer option -->
+                    <li>
+                        <!-- <input type="radio" class="answerOption" id="answer4" name="quiz-answer">
+                        <label id="choice4" for="answer4">Question</label> -->
+                        <button id="choice4">Question</button>
+                    </li>
+                </ul>   
+            </div>
 
-        <!-- Start of the answers -->
-        <ul>
-            <!-- First answer option -->
-            <li>
-                <input type="radio" class="answerOption" id="answer1" name="quiz-answer">
-                <label id="choice1" for="answer1">Question</label>
-            </li>
-            <!-- Second answer option -->
-            <li>
-                <input type="radio" class="answerOption" id="answer2" name="quiz-answer">
-                <label id="choice2" for="answer2">Question</label>
-            </li>
-            <!-- Third answer option -->
-            <li>
-                <input type="radio" class="answerOption" id="answer3" name="quiz-answer">
-                <label id="choice3" for="answer3">Question</label>
-            </li>
-            <!-- Fourth answer option -->
-            <li>
-                <input type="radio" class="answerOption" id="answer4" name="quiz-answer">
-                <label id="choice4" for="answer4">Question</label>
-            </li>
-        </ul>   
+        </div>
 
-        <!-- Create submit button -->
-        <button id="submit">Submit</button>
+        <!-- Create form to add list of people at the result page -->
+        <div class="create-form">
+            <form id="form">
+                <h2>You're done with the Quiz!!! Here's the result:</h2>
+                <ul id="listpeople">
+                    <li></li>
+                </ul>
+                    <input type="text" id="nameinput" placeholder="Put your initial here">
+                    <button id="addbutton">Add to the Honorable Mentions</button>
+    
+                <!-- Create a reload button to start the quiz from the beginning -->
+                <button onclick="location.reload()">Reload</button>
+            </form>
+        </div>
+        
+        
     </div>
 
     <!-- Link the JS file -->
