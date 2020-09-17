@@ -150,13 +150,6 @@ function listOfPerson(event){
     localStorage.setItem("key", addName);
 }
 
-// Store data in local storage
-localStorage.setItem("key", quizScore);
-
-// localStorage.setItem("key", quizScore); // key would be the text content of the input box on top of my submit button and quiz score will be the text content of the box on top of the submit button + quiz score
-    // localStorage.getItem()
-    // getItem()
-
 // Add the event listener to the buttons
 addButton.addEventListener("click", listOfPerson);
 

@@ -1,6 +1,6 @@
 # QuizGame
-Link to github repo:
-Link to the website:
+Link to github repo: https://github.com/stevenbong96/QuizGame
+Link to the website: https://stevenbong96.github.io/QuizGame/
 
 Week 3 HW #1 Quiz Game App
 
@@ -14,4 +14,4 @@ The overall scope of this HW is to enhance the students ability in utilizing Jav
 7.  Made another form for the user to put their name into the list and store it to the local storage, so the input will not be deleted every time the user start the quiz again
 
 Screenshot of what I made for this Quiz App listed below:
-
+![Quiz App](./screenshot.JPG)
